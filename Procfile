@@ -1,1 +1,1 @@
-"web: gunicorn AirbagFix_Django.wsgi --log-file -" 
+"web: gunicorn AribagFix_Django.wsgi --log-file -" 
