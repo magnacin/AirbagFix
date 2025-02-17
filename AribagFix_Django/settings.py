@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # DJANGO_AIRBAGFIX_SK
-SECRET_KEY = 'django-insecure-@70y0i2mg0(px4ll0=jsu%i32=6+bp6ibns%53*)0*0f79cg*h' # Obtiene las variables de entorno que estan en otro lado
+SECRET_KEY = os.getenv("SECRET_KEY", "131605iteso#") # Obtiene las variables de entorno que estan en otro lado
 # 
 
 # SECURITY WARNING: don't run with debug turned on in production!
