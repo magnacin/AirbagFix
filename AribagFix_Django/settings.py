@@ -15,7 +15,7 @@ from pathlib import Path
 import django_heroku # Se importa utileria para usar heroku y subir el sitio al servidor de Heroku
 import dj_database_url
 import decouple
-#import config
+import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'
 BASE_DIR = Path(__file__).resolve().parent.parent
