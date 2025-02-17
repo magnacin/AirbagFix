@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en"> 
+  <head>
+    <title>AirbagFix</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{% static 'airbagfix_web/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+    <link rel="stylesheet" href="{% static 'airbagfix_web/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'airbagfix_web/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'airbagfix_web/css/style.css' %}">
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+
+    {% block content %} <!-- Esto indica que dentro de este espacio se puede poner el codigo de la plantilla hija, 
+       y se llama content, aunque se puede llamar como sea y haber los que sean necesarios que hereda lo de esta plantilla-->
+
+    {% endblock content %}
+
+    {% include 'footer.html' %}
+  </body>
+</html>

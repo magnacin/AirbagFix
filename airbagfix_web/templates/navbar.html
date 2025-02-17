@@ -1,0 +1,112 @@
+{% load static %}
+<!-- Barra de Navegación -->
+<div class="rd-navbar-wrap rd-navbar-wrap-absolute">
+  <nav class="rd-navbar novi-bg" data-layout="rd-navbar-static">
+    <div class="rd-navbar-main-outer">
+      <div class="rd-navbar-main">
+        <!-- Panel de Navegación -->
+        <div class="rd-navbar-panel">
+          <!-- Botón de menú (versión móvil) -->
+          <button
+            class="rd-navbar-toggle"
+            data-rd-navbar-toggle=".rd-navbar-nav-wrap"
+          >
+            <span></span>
+          </button>
+
+          <!-- Logo Airbag Fix -->
+          <div class="rd-navbar-brand">
+            <a class="brand" href="{% url 'home' %}">
+              <img
+                src="{% static 'airbagfix_web/images/logo-default.png' %}"
+                alt="Airbag Fix Logo"
+                class="navbar-logo"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Elementos de Navegación -->
+        <div class="rd-navbar-main-element">
+          <div class="rd-navbar-nav-wrap">
+            <ul class="rd-navbar-nav">
+              <li class="rd-nav-item active">
+                <a class="rd-nav-link" href="{% url 'home' %}">Inicio</a>
+              </li>
+              <li class="rd-nav-item">
+                <a class="rd-nav-link" href="{% url 'airbag' %}">Airbag</a>
+              </li>
+              <li class="rd-nav-item">
+                <a class="rd-nav-link" href="{% url 'dpf' %}"
+                  >Ahorro de Combustible</a
+                >
+              </li>
+              <li class="rd-nav-item">
+                <a class="rd-nav-link" href="{% url 'home' %}"
+                  >Otros Servicios</a
+                >
+              </li>
+              <!-- Botón Cash Back (Fondo Rojo) -->
+              <li class="rd-nav-item">
+                <a class="rd-nav-link cashback-button" href="{% url 'leer' %}">
+                  💰 Cash Back
+                </a>
+              </li>
+              <!-- Contacto -->
+              <li class="rd-nav-item">
+                <a class="rd-nav-link" href="{% url 'contacts' %}">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Estilos Mejorados -->
+<style>
+  /* Estilo General de la Barra */
+  .rd-navbar {
+    background-color: #1f3a60;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilo del Logo */
+  .navbar-logo {
+    width: 45mm; /* 4.5 cm */
+    height: 20mm; /* 2 cm */
+    object-fit: contain; /* Asegura que el logo mantenga su proporción */
+  }
+
+  /* Estilo de los enlaces en la barra */
+  .rd-navbar-nav .rd-nav-link {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .rd-navbar-nav .rd-nav-link:hover {
+    color: #f1c40f;
+  }
+
+  /* Estilo del Botón Cash Back (Fondo Rojo) */
+  .cashback-button {
+    background-color: #d9534f; /* Rojo */
+    color: white !important;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+
+  .cashback-button:hover {
+    background-color: #b52b27; /* Rojo más oscuro en hover */
+    transform: scale(1.1);
+  }
+</style>

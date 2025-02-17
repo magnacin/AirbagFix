@@ -1,0 +1,124 @@
+{% extends 'main.html' %}
+<!-- toma la plantilla padre y la hereda a esta plantilla hija-->
+{% load static %} {% block content %}
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <!-- Our Capabilities-->
+  <section class="section novi-bg novi-bg-img section-lg bg-default">
+    <div class="container">
+      <h3 class="text-center">
+        <span style="color: red" class="font-weight-black">Venta </span> de Archivos
+      </h3>
+      <div class="row row-30">
+        <div class="col-lg-5">
+          <img
+            src="{% static 'airbagfix_web/images/hex.png' %}"
+            alt=""
+            width="470"
+            height="434"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h4>No tiene la solución de un módulo?.</h4>
+          <p>
+            Si no cuenta con una solución para algún módulo en reparación? No se
+            preocupe, nosotros contamos con el servicio de limpieza de archivos con un costo desde $800 MXN.
+          </p>
+          <p>
+            
+            <p>  En 3 Sencillos Pasos:</p>
+          <p>1.- Envie x email su archivo con la informacion del choque. Incluya el numero de parte del modulo y modelo del auto.</p>
+          <p>2.- Relice el pago del servicio a traves de Paypal directo o aqui en el sitio.</p>
+          <p>2.- Reciba su archivo corregido y listo para utilizarse. 100% Garantizado.</p>
+          </p>
+        </div>
+        <!-- <a class="button button-primary-darken" href="#">Quiero mas Información</a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Algunos avisos 
+
+  <section
+    class="parallax-container section-xl"
+    data-parallax-img="{% static 'airbagfix_web/images/speedometer-2.jpg' %}"
+  >
+    <div class="parallax-content">
+      <div class="container">
+        <h3 class="text-center">
+          <span class="font-weight-black">Beneficios </span> Del Remapeo
+        </h3>
+        <div class="row row-50">
+          <div class="col-12">
+            <div class="row row-30">
+              <div class="col-lg-6">
+                <img
+                  src="{% static 'airbagfix_web/images/services04.jpg' %}"
+                  alt=""
+                  width="570"
+                  height="360"
+                />
+              </div>
+              <div class="col-lg-6">
+                <h6>Algunos de los beneficios del Remapeo son:</h6>
+                <p>1.- Mejora la Potencia y el Torque</p>
+                <p>2.- Mejora la Eficiencia en el Combustible</p>
+                <p>3.- Mejora la respuesta del Acelerador</p>
+                <p>4.- Elimina los Limites de Velocidad y RPM's</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row row-20 flex-lg-row-reverse">
+              <div class="col-lg-6">
+                <img
+                  src="{% static 'airbagfix_web/images/home05.jpg' %}"
+                  alt=""
+                  width="570"
+                  height="360"
+                />
+              </div>
+              <div class="col-lg-6">
+                <h6>Y Como se hace?.</h6>
+                <p>
+                  El acceso a la información de la ECU se logra de 3 formas
+                  principales, dependiendo del tipo de auto computadora y
+                  protocolo de comunicación. Por OBD. El equipo lector se
+                  conecta al puerto de diagnostico y la lectura se lleva a cabo
+                  de manera no invasiva.
+                </p>
+                <p>
+                  Por BENCH. La computadora se desmonta del auto y se pone en el
+                  banco de pruebas donde se conecta el equipo lector.
+                </p>
+                <p>
+                  Por BOOT. Este es el único método en el cual es necesario
+                  abrir la ECU para poder conectar el equipo y realizar la
+                  lectura
+                </p>
+                <p style="color: green">
+                  Cabe mencionar que TODOS los métodos de lectura son estables y
+                  no ponen en riesgo su unidad. Esto por que se realizan con los
+                  equipos mas sofisticados del mercado y con el personal
+                  calificado para estas tareas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section> -->
+</div>
+<div class="snackbars" id="form-output-global"></div>
+<script src="{% static 'airbagfix_web/js/core.min.js' %}"></script>
+<script src="{% static 'airbagfix_web/js/script.js' %}"></script>
+{% endblock content %}
+<!-- fin del bloque llamado content -->

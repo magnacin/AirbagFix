@@ -1,0 +1,309 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <header>
+    <div class="swiper-container swiper-slider-lg"
+      data-loop="true"
+      data-autoplay="5500"
+      data-simulate-touch="false"
+      data-slide-effect="fade">
+      
+      <div class="swiper-wrapper text-center">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide context-dark"
+          style="
+            background-image: url('{% static 'airbagfix_web/images/luz.png' %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000;
+          ">
+          <div class="swiper-slide-caption section">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                  <h2 class="slide-title">AIRBAG FIX: SISTEMAS DE BOLSAS DE AIRE</h2>
+                  <p class="slide-text">
+                    Airbag Fix, somos líderes en el mercado en solución de problemas en los Sistemas de Bolsas de Aire.  
+                    Nos especializamos en Reprogramación de Módulos SRS y fallas electrónicas de los sistemas.  
+                    También tenemos Venta, Reparación e Instalación de Cinturones de Seguridad y Bolsas.  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide context-dark"
+          style="
+            background-image: url('{% static 'airbagfix_web/images/home05.jpg' %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #222;
+          ">
+          <div class="swiper-slide-caption section-lg">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                  <h2 class="slide-title" style="color: #ffcc00;">AUMENTE LA POTENCIA DE SU VEHICULO</h2>
+                  <p class="slide-text" style="color: #ffffff; font-size: 30px;">
+                    OPTIMIZACION INTELIGENTE PARA SU MOTOR
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide context-dark"
+          style="
+            background-image: url('{% static 'airbagfix_web/images/motor.jpg' %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000;
+          ">
+          <div class="swiper-slide-caption section-lg">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                  <h2 class="slide-title" style="color: red; background-color: #333; padding: 10px; border-radius: 8px;">
+                    Limitadores de Velocidad, Potenciación y Eliminaciones de DPF, EGR y UREA
+                  </h2>
+                  
+                  <p class="slide-text" style="color: white; background: #333; border-radius: 8px; padding: 15px;">
+                    Sabia usted que puede ahorrar hasta $25,000 anuales por unidad si limita la velocidad a un maximo de 
+                    80 km/hr.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+</div>
+
+<style>
+  /* Estilos mejorados */
+  .slide-title {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .slide-text {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+</style>
+
+
+    
+      <!--Swiper Pagination-->
+      <div class="swiper-pagination"></div>
+      <!--Swiper Navigation-->
+      <div class="swiper-button-prev fa-arrow-left"></div>
+      <div class="swiper-button-next fa-arrow-right"></div>
+    </div>
+  </header>
+  <!-- a Few words About Us-->
+  <section class="section novi-bg novi-bg-img section-xl text-center" style="background-color: #2C3E50; color: white; padding: 60px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-11">
+          <h2 style="color: #F1C40F; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);">
+            AIRBAG FIX 
+            <span class="font-weight-black" style="color: white;"> Quiénes Somos</span>
+          </h2>
+          <p class="big font-weight-black px-lg-4" 
+             style="font-size: 20px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);">
+            Somos una empresa que nació de la necesidad de proveer un diagnóstico preciso para fallas en los sistemas SRS.  
+            Con el tiempo, hemos perfeccionado nuestras técnicas al adquirir equipos con tecnología de punta en electrónica automotriz.  
+            Ahora también incursionamos en el mercado de **optimización de combustible y reprogramación de computadoras automotrices**  
+            para brindar una **mejor experiencia de manejo**.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Best Services-->
+  <section class="section novi-bg text-center object-wrap" style="background-color: #1F3A60; color: white; padding: 60px 0;">
+    <div 
+      class="novi-bg-img object-body object-body-left" 
+      style="background-image: url(static/airbagfix_web/images/home01.jpg); background-size: cover; background-position: center; opacity: 0.2;">
+    </div>
+    <div class="container container-fluid">
+      <div class="row justify-content-end section-xl">
+        <div class="col-lg-6">
+          <h2 style="font-size: 36px; font-weight: bold; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);">
+            Equipos de Programación  
+            <span class="font-weight-black" style="color: #F1C40F;">De Ultima Generación</span>
+          </h2>
+          <p class="big font-weight-black px-lg-5" 
+             style="font-size: 20px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);">
+            En **Airbag Fix** podemos resolver la mayoría de los problemas en bolsas de aire que su vehículo pueda presentar.  
+            Contamos con **refacciones, programas y equipos originales** para el diagnóstico y corrección de fallas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Our Services-->
+  <section class="parallax-container section-xl text-center" data-parallax-img="{% static 'airbagfix_web/images/home-03-1920x1200.jpg' %}">
+    <div class="parallax-content">
+      <div class="container">
+        <h2 class="text-center" style="color: white; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);">
+          Nuestros <span class="font-weight-black" style="color: #F1C40F;">Servicios</span>
+        </h2>
+  
+        <div class="row row-30 mt-lg-5 justify-content-center">
+          
+          <!-- Primera Fila -->
+          <div class="col-md-6">
+            <div class="service-box">
+              <figure class="service-image">
+                <a href="{% url 'airbag' %}">
+                  <img src="{% static 'airbagfix_web/images/home04.jpg' %}" alt="Reprogramación de Módulos SRS" class="img-fluid service-img"/>
+                </a>
+              </figure>
+              <div class="service-body">
+                <h4 class="service-title"><a href="{% url 'airbag' %}">Reprogramación de Módulos SRS</a></h4>
+                <p class="service-text">Reprogramamos el 99% de los módulos de SRS de cualquier marca y modelos posteriores a 2004.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <div class="service-box">
+              <figure class="service-image">
+                <a href="{% url 'dpf' %}">
+                  <img src="{% static 'airbagfix_web/images/home6.jpg' %}" alt="Mejoras Vehiculares" class="img-fluid service-img"/>
+                </a>
+              </figure>
+              <div class="service-body">
+                <h4 class="service-title"><a href="{% url 'dpf' %}">Mejoras Vehiculares</a></h4>
+                <p class="service-text">
+                  - Limitadores de Velocidad<br>
+                  - Eliminación de DPF, EGR y urea<br>
+                  - Aumento de Potencia y Torque Etapa 1
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Segunda Fila -->
+          <div class="col-md-6">
+            <div class="service-box">
+              <figure class="service-image">
+                <a href="{% url 'leer' %}">
+                  <img src="{% static 'airbagfix_web/images/cashback.jpg' %}" alt="Cash Back" class="img-fluid service-img"/>
+                </a>
+              </figure>
+              <div class="service-body">
+                <h4 class="service-title"><a href="{% url 'leer' %}">Programa de Cash Back</a></h4>
+                <p class="service-text">Gana dinero refiriendo a tus amigos con nosotros.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <div class="service-box">
+              <figure class="service-image">
+                <a href="{% url 'dpf' %}">
+                  <img src="{% static 'airbagfix_web/images/cinturones.jpg' %}" alt="DPF EGR y AdBlue" class="img-fluid service-img"/>
+                </a>
+              </figure>
+              <div class="service-body">
+                <h4 class="service-title"><a href="{% url 'dpf' %}">Reparación de Cinturones de Seguridad</a></h4>
+                <p class="service-text">Destrabamos y reacondicionamos cinturones de seguridad</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Estilos Mejorados -->
+  <style>
+    /* Estilo de los cuadros de servicio */
+    .service-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: background 0.3s ease-in-out, transform 0.3s;
+    }
+  
+    .service-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.03);
+    }
+  
+    /* Imágenes del mismo tamaño */
+    .service-img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .service-img:hover {
+      transform: scale(1.05);
+    }
+  
+    /* Estilo del título */
+    .service-title a {
+      color: #F1C40F;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  
+    .service-title a:hover {
+      color: #FFD700;
+    }
+  
+    /* Estilo del texto */
+    .service-text {
+      font-size: 16px;
+      color: white;
+    }
+  </style>
+  
+  
+
+
+</div>
+
+<div class="snackbars" id="form-output-global"></div>
+<script src="{% static 'airbagfix_web/js/core.min.js' %}"></script>
+<script src="{% static 'airbagfix_web/js/script.js' %}"></script>
+{% endblock content %}
+<!-- Fin de la plantilla hija o la que se puede modificar -->

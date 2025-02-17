@@ -1,0 +1,250 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <!-- Sección: Ubicación -->
+  <section
+    class="section novi-bg novi-bg-img bg-default text-center section-reduced"
+  >
+    <div class="container">
+      <h3 class="section-title">
+        📍 Nuestra <span class="font-weight-black">Ubicación</span>
+      </h3>
+
+      <!-- Google Map -->
+      <div class="google-map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14933.122115328357!2d-103.336804!3d20.658163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcf40c197852d36bb!2sAirbag%20Fix!5e0!3m2!1ses-419!2smx!4v1662416387247!5m2!1ses-419!2smx"
+          width="100%"
+          height="400"
+          style="border-radius: 8px; border: none"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <!-- Datos de contacto -->
+      <div class="contact-info">
+        <p>
+          <i class="fa fa-map-marker"></i> Azucena #652, Col. San Carlos,
+          Guadalajara, Jalisco.
+        </p>
+        <p>
+          <i class="fa fa-phone"></i> Teléfono:
+          <a href="tel:+523317998437">+52 33 1799 8437</a>
+        </p>
+        <p>
+          <i class="fa fa-envelope"></i> Correo:
+          <a href="mailto:info@airbagfix.mx">info@airbagfix.mx</a>
+        </p>
+
+        <!-- Botones de contacto -->
+        <div class="contact-buttons">
+          <a
+            href="https://wa.me/523317998437"
+            target="_blank"
+            class="whatsapp-button"
+          >
+            <i class="fa fa-whatsapp"></i> Enviar WhatsApp
+          </a>
+          <a href="mailto:info@airbagfix.mx" class="email-button">
+            <i class="fa fa-envelope"></i> Enviar Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Formulario de Contacto -->
+  <section class="section novi-bg bg-white text-center section-reduced">
+    <div class="container">
+      <h3 class="section-title">📩 Contáctanos</h3>
+
+      {% if message_name %}
+      <div class="success-message">
+        <h4>¡Gracias {{ message_name }}!</h4>
+        <p>Hemos recibido tu mensaje y te responderemos pronto.</p>
+      </div>
+      {% endif %}
+
+      <!-- Formulario de contacto -->
+      <form action="{% url 'contacts' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="contact-name">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="contact-name"
+            name="message-name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">E-Mail</label>
+          <input
+            type="email"
+            class="form-control"
+            id="contact-email"
+            name="message-email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Mensaje</label>
+          <textarea
+            class="form-control"
+            id="contact-message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Google Captcha -->
+        <div class="recaptcha-container">
+          <div
+            class="recaptcha"
+            id="captcha1"
+            data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"
+          ></div>
+        </div>
+
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- Estilos Mejorados -->
+<style>
+  /* Ajuste de la sección */
+  .section-reduced {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #1f3a60; /* Fondo gris oscuro */
+  }
+
+  /* Títulos de sección */
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f1c40f;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+
+  /* Google Map */
+  .google-map-container {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Información de contacto */
+  .contact-info p {
+    font-size: 18px;
+    color: white; /* Ahora en blanco para mejor visibilidad */
+  }
+
+  .contact-info i {
+    color: #f1c40f;
+    margin-right: 10px;
+  }
+
+  /* Botones de contacto */
+  .contact-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .whatsapp-button,
+  .email-button {
+    background: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .email-button {
+    background: #f1c40f;
+    color: black;
+  }
+
+  .whatsapp-button:hover {
+    background: #1ebe5d;
+  }
+
+  .email-button:hover {
+    background: #d4a017;
+  }
+
+  /* Formulario de contacto */
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+    color: #1f3a60;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  textarea.form-control {
+    height: 120px;
+    resize: none;
+  }
+
+  /* Botón de enviar */
+  .submit-button {
+    background: #f1c40f;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .submit-button:hover {
+    background: #d4a017;
+  }
+
+  /* Mensaje de éxito */
+  .success-message {
+    background: #dff0d8;
+    color: #3c763d;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<!-- Scripts -->
+<div class="snackbars" id="form-output-global"></div>
+<script src="{% static 'airbagfix_web/js/core.min.js' %}"></script>
+<script src="{% static 'airbagfix_web/js/script.js' %}"></script>
+
+{% endblock content %}

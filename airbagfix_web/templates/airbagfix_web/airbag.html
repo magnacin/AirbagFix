@@ -1,0 +1,232 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <!-- Sección: Bolsas de Aire -->
+  <section
+    class="section novi-bg novi-bg-img text-center section-reduced blue-background"
+  >
+    <div class="container">
+      <h3>
+        <span class="font-weight-black" style="color: #f1c40f">Bolsas de </span>
+        Aire
+      </h3>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <img
+            src="{% static 'airbagfix_web/images/home04.jpg' %}"
+            alt="Bolsas de Aire"
+            class="img-fluid mx-auto d-block"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-lg-8">
+          <h5 class="highlight-text">
+            NO DEJE SU SEGURIDAD NI LA DE SU FAMILIA EN MANOS INEXPERTAS.
+          </h5>
+          <p class="important-text">
+            Somos líderes en el diagnóstico y solución de fallas en bolsas de
+            aire.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Beneficios de Reparar Módulos -->
+  <section
+    class="parallax-container text-center text-white section-reduced blue-background"
+    data-parallax-img="{% static 'airbagfix_web/images/airbag1.jpg' %}"
+  >
+    <div class="parallax-content">
+      <div class="container">
+        <h3>
+          <span class="font-weight-black" style="color: #f1c40f"
+            >Beneficios de Reparar</span
+          >
+          Módulos
+        </h3>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <img
+              src="{% static 'airbagfix_web/images/airbag2.jpg' %}"
+              alt="Reparación de Módulos"
+              class="img-fluid mx-auto d-block"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-lg-8">
+            <h6 class="highlight-text-small">
+              Si reprograma su Módulo SRS, usted podrá:
+            </h6>
+            <ul class="benefits-list">
+              <li>
+                <strong>Ahorro Económico:</strong> No es necesario comprar un
+                módulo nuevo.
+              </li>
+              <li>
+                <strong>Menos Tiempo de Espera:</strong> Sin configuraciones
+                adicionales.
+              </li>
+              <li>
+                <strong>Garantía de Funcionamiento:</strong> Nos aseguramos de
+                su correcto funcionamiento.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Servicios en Bolsas de Aire -->
+  <section
+    class="section novi-bg novi-bg-img text-center section-reduced blue-background"
+  >
+    <div class="container">
+      <h3>
+        <span class="font-weight-black" style="color: #f1c40f">Servicios</span>
+        en Bolsas de Aire
+      </h3>
+      <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-1">
+        <ul class="nav nav-tabs nav-tabs-modern">
+          <li class="nav-item">
+            <a class="nav-link-modern active" href="#tabs-1-1" data-toggle="tab"
+              >Instalación de Bolsas de Aire</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-modern" href="#tabs-1-2" data-toggle="tab"
+              >Reprogramación de Módulos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-modern" href="#tabs-1-3" data-toggle="tab"
+              >Garantía</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tabs-1-1">
+            <h4>Instalación de Bolsas de Aire</h4>
+            <p>
+              Ya sea que usted traiga sus bolsas a instalar o nosotros las
+              consigamos por usted.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="tabs-1-2">
+            <h4>Reprogramación de Módulos</h4>
+            <p>
+              Eliminamos la información de choque del módulo y lo dejamos activo
+              para su correcto funcionamiento.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="tabs-1-3">
+            <h4>Garantía</h4>
+            <p>
+              Todos nuestros trabajos están
+              <strong>100% garantizados</strong> para ofrecerle tranquilidad y
+              seguridad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Estilos Adicionales -->
+<style>
+  /* Reducir espacio entre secciones */
+  .section-reduced {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* Fondo azul */
+  .blue-background {
+    background: #1f3a60;
+  }
+
+  /* Texto resaltado */
+  .highlight-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background-color: #d9534f;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .highlight-text-small {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff9900;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  /* Lista de beneficios */
+  .benefits-list {
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 6px;
+    list-style: none;
+    text-align: left;
+  }
+
+  .benefits-list li {
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para el texto en azul */
+  h3,
+  h4,
+  p,
+  .nav-tabs a {
+    color: white;
+  }
+
+  .nav-tabs .nav-link {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .nav-tabs .nav-link:hover,
+  .nav-tabs .nav-link.active {
+    background: #f1c40f;
+    color: #1f3a60;
+  }
+  /* Texto importante con mayor tamaño y negrita */
+  .important-text {
+    font-size: 26px; /* Aumentado */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+  }
+</style>
+
+<!-- Scripts -->
+<div class="snackbars" id="form-output-global"></div>
+<script src="{% static 'airbagfix_web/js/core.min.js' %}"></script>
+<script src="{% static 'airbagfix_web/js/script.js' %}"></script>
+
+{% endblock content %}

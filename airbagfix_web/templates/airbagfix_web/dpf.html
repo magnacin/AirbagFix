@@ -1,0 +1,406 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+
+<div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <!-- Sección: Beneficios de Eliminaciones -->
+  <section
+    class="section novi-bg section-lg bg-dark text-white"
+    style="margin-top: 60px"
+  >
+    <div class="container">
+      <h3 class="text-center highlight-title">
+        <span class="font-weight-black">Beneficios de</span> Eliminaciones
+      </h3>
+
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <img
+            src="{% static 'airbagfix_web/images/speed.jpg' %}"
+            alt="Limitador de Velocidad"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h4 class="highlight-subtitle text-warning">
+            Ventajas de Limitadores de Velocidad
+          </h4>
+          <ul class="benefits-list">
+            <li>✅ Ahorro significativo de combustible.</li>
+            <li>
+              ✅ Reducción del riesgo de accidentes por exceso de velocidad.
+            </li>
+            <li>✅ Disminución de sanciones y multas de tránsito.</li>
+            <li>✅ Menor desgaste de frenos y motor.</li>
+            <li>✅ Mayor vida útil del vehículo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Beneficios de Eliminación DPF, EGR y Urea -->
+  <section class="section novi-bg section-lg bg-dark text-white">
+    <div class="container">
+      <h3 class="text-center highlight-title">
+        Beneficios de Eliminación DPF, EGR y Urea
+      </h3>
+
+      <!-- Eliminación de DPF -->
+      <div class="row align-items-center mb-4">
+        <div class="col-lg-5">
+          <img
+            src="{% static 'airbagfix_web/images/dpf.jpg' %}"
+            alt="DPF"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h4 class="highlight-subtitle text-warning">¿Qué es un DPF?</h4>
+          <p class="highlight-text">
+            El **Filtro de Partículas Diésel (DPF)** retiene partículas
+            contaminantes generadas por la combustión del motor diésel. Cuando
+            se satura, requiere un proceso de regeneración que puede fallar y
+            generar averías costosas.
+          </p>
+          <h5 class="highlight-subtitle">Beneficios de eliminarlo:</h5>
+          <ul class="benefits-list">
+            <li>
+              ✅ Mayor eficiencia del motor y reducción de consumo de
+              combustible.
+            </li>
+            <li>✅ Eliminación de problemas de regeneración fallida.</li>
+            <li>✅ Menos costos en mantenimiento y reparaciones.</li>
+          </ul>
+          <h5 class="highlight-subtitle text-danger">Limitaciones:</h5>
+          <ul class="limitations-list">
+            <li>
+              ⚠️ Eliminación no permitida en algunos países por normativas
+              ambientales.
+            </li>
+            <li>⚠️ Puede aumentar la emisión de partículas contaminantes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Eliminación de EGR -->
+      <div class="row align-items-center mb-4 flex-lg-row-reverse">
+        <div class="col-lg-5">
+          <img
+            src="{% static 'airbagfix_web/images/egr.jpg' %}"
+            alt="EGR"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h4 class="highlight-subtitle text-warning">¿Qué es una EGR?</h4>
+          <p class="highlight-text">
+            La **Válvula de Recirculación de Gases de Escape (EGR)** redirige
+            parte de los gases quemados hacia la admisión, reduciendo las
+            emisiones de óxidos de nitrógeno. Con el tiempo, provoca acumulación
+            de hollín y pérdida de potencia.
+          </p>
+          <h5 class="highlight-subtitle">Beneficios de eliminarla:</h5>
+          <ul class="benefits-list">
+            <li>✅ Aumento en la potencia y respuesta del motor.</li>
+            <li>✅ Reducción del hollín y suciedad en la admisión.</li>
+            <li>✅ Menos costos de mantenimiento y averías.</li>
+          </ul>
+          <h5 class="highlight-subtitle text-danger">Limitaciones:</h5>
+          <ul class="limitations-list">
+            <li>⚠️ Puede aumentar las emisiones de óxidos de nitrógeno.</li>
+            <li>
+              ⚠️ Si No se hace Correctamente, podría generar códigos de error.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Eliminación de Urea / AdBlue -->
+      <div class="row align-items-center mb-4">
+        <div class="col-lg-5">
+          <img
+            src="{% static 'airbagfix_web/images/adblue.jpg' %}"
+            alt="AdBlue"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h4 class="highlight-subtitle text-warning">
+            ¿Qué es el sistema de Urea (AdBlue)?
+          </h4>
+          <p class="highlight-text">
+            El sistema **AdBlue (Urea)** es un sistema de reducción de emisiones
+            que inyecta líquido a los gases de escape para reducir óxidos de
+            nitrógeno. Su mal funcionamiento puede inmovilizar el vehículo y
+            generar costos elevados de reparación.
+          </p>
+          <h5 class="highlight-subtitle">Beneficios de eliminarlo:</h5>
+          <ul class="benefits-list">
+            <li>✅ Evita costosos reemplazos y recargas de AdBlue.</li>
+            <li>✅ Reduce fallas electrónicas y bloqueos del sistema.</li>
+            <li>✅ Mayor confiabilidad en el vehículo.</li>
+          </ul>
+          <h5 class="highlight-subtitle text-danger">Limitaciones:</h5>
+          <ul class="limitations-list">
+            <li>
+              ⚠️ No permitido en zonas donde se exigen controles estrictos de
+              emisiones.
+            </li>
+            <li>⚠️ Si No se hace Correctamente, podría generar códigos de error.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estilos Mejorados -->
+  <style>
+    .bg-dark {
+      background-color: #1f1f1f !important;
+    }
+
+    .text-warning {
+      color: #f1c40f !important;
+    }
+
+    .text-danger {
+      color: #d9534f !important;
+    }
+
+    .highlight-title {
+      color: rgb(15, 241, 53);
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .highlight-subtitle {
+      color: #f1c40f;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .highlight-text {
+      font-size: 18px;
+      color: #eaeaea;
+      text-align: justify;
+    }
+
+    .benefits-list,
+    .limitations-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 18px;
+    }
+
+    .benefits-list li {
+      color: #f1c40f;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .limitations-list li {
+      color: #d9534f;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <!-- Tabla Comparativa: Ahorros Estimados con Limitadores de Velocidad -->
+  <section class="section novi-bg section-lg bg-dark text-white">
+    <div class="container">
+      <h3 class="text-center highlight-title">
+        <span class="font-weight-black">Ahorro Estimado:</span> Limitador de
+        Velocidad
+      </h3>
+      <div class="table-responsive">
+        <table class="table savings-table text-center">
+          <thead>
+            <tr>
+              <th>Tipo de Vehículo</th>
+              <th>Consumo Estimado sin Limitador</th>
+              <th>Consumo Estimado con Limitador</th>
+              <th>Ahorro Estimado Anual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Auto Particular (35,000 km/año)</td>
+              <td>$87,500</td>
+              <td>$72,917</td>
+              <td class="text-success"><strong>$14,583</strong></td>
+            </tr>
+            <tr>
+              <td>Flotilla Gasolina (75,000 km/año)</td>
+              <td>$187,500</td>
+              <td>$156,250</td>
+              <td class="text-success"><strong>$31,250</strong></td>
+            </tr>
+            <tr>
+              <td>Flotilla Diésel (100,000 km/año)</td>
+              <td>$166,667</td>
+              <td>$147,059</td>
+              <td class="text-success"><strong>$19,608</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-center mt-3 text-light">
+          <em
+            >Datos estimativos para fines ilustrativos. <br />
+            Consumos y rendimientos varían dependiendo del vehículo y las
+            condiciones de manejo.</em
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estilos Mejorados -->
+  <style>
+    /* Fondo general de la tabla */
+    .savings-table {
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+    }
+
+    /* Encabezado de la tabla */
+    .savings-table th {
+      background-color: rgb(15, 241, 87);
+      color: #222;
+      font-weight: bold;
+      padding: 12px;
+      text-transform: uppercase;
+    }
+
+    /* Filas alternadas para mejor legibilidad */
+    .savings-table tbody tr:nth-child(odd) {
+      background-color: #333;
+    }
+
+    .savings-table tbody tr:nth-child(even) {
+      background-color: #444;
+    }
+
+    /* Celdas de la tabla */
+    .savings-table td {
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #f8f9fa;
+    }
+
+    /* Resaltar los ahorros */
+    .text-success {
+      color: #28a745 !important;
+    }
+
+    /* Título resaltado */
+    .highlight-title {
+      color: #f1c40f;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    /* Nota informativa */
+    .text-light {
+      color: #dcdcdc !important;
+    }
+
+    <!-- Estilos Mejorados -->
+    <style>
+      .highlight-title {
+        color: #f1c40f;
+        font-size: 26px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+    
+      .highlight-subtitle {
+        color: #f1c40f;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    
+      .highlight-text {
+        font-size: 18px;
+        color: #eaeaea;
+        text-align: justify;
+      }
+    
+      .benefits-list,
+      .limitations-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 18px;
+      }
+    
+      .benefits-list li {
+        color: #f1c40f;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    
+      .limitations-list li {
+        color: #d9534f;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    
+      .savings-table th {
+        background-color: #1f3a60;
+        color: white;
+        padding: 12px;
+      }
+    
+      .savings-table td {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    
+      .bg-dark {
+        background-color: #1f1f1f !important;
+      }
+    
+      .bg-secondary {
+        background-color: #2c2c2c !important;
+      }
+    
+      .text-warning {
+        color: #f1c40f !important;
+      }
+    
+      .text-success {
+        color: #28a745 !important;
+      }
+    
+      .text-danger {
+        color: #d9534f !important;
+      }
+    </style>
+
+  </style>
+</div>
+
+<!-- Scripts -->
+<div class="snackbars" id="form-output-global"></div>
+<script src="{% static 'airbagfix_web/js/core.min.js' %}"></script>
+<script src="{% static 'airbagfix_web/js/script.js' %}"></script>
+
+{% endblock content %}
