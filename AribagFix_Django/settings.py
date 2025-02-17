@@ -14,8 +14,8 @@ from pathlib import Path
 # Los de abajo son import settings necesarios para desplegar la pagina en Heroku
 import django_heroku # Se importa utileria para usar heroku y subir el sitio al servidor de Heroku
 import dj_database_url
-import decouple
-import config
+from decouple import config # instalar python-decouple en lugar de decouple. 
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,9 +84,11 @@ WSGI_APPLICATION = 'AribagFix_Django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+DATABASE_URL = config("DATABASE_URL", default="sqlite:///db.sqlite3")
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL', default='sqlite:///db.sqlite3'))
+    "default": dj_database_url.config(default=DATABASE_URL)
 }
+
 
 
 
