@@ -18,7 +18,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "131605iteso#") # Obtiene las variables de 
 # caso la pondre directamente fija aqui 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False # Para cuando trabajamos de manera local
+DEBUG = True # Para cuando trabajamos de manera local
 
 ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix2025.onrender.com',
                  'airbagfix.mx'] #,'localhost', '127.0.0.1'] # Que sitios web se permite acceder
