@@ -25,14 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # DJANGO_AIRBAGFIX_SK
-SECRET_KEY = os.getenv("SECRET_KEY", "131605iteso#") # Obtiene las variables de entorno que estan en otro lado
-# 
+SECRET_KEY = os.getenv("SECRET_KEY", "131605iteso#") # Obtiene las variables de entorno que estan en otro lado 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False # Para cuando trabajamos de manera local
 
-ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix.herokuapp.com',
-                 'airbagfix.mx', 'localhost', '127.0.0.1'] # Que sitios web se permite acceder
+ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix.up.railway.app',
+                 'airbagfix.mx'] # Que sitios web se permite acceder en railway
 
 
 # Application definition
@@ -55,8 +54,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
 ]
 
 ROOT_URLCONF = 'AribagFix_Django.urls'
@@ -127,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -144,7 +142,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtpout.secureserver.net' # Servidor de salida del proveedor del dominio
 EMAIL_PORT = 587 # email port Go Daddy
 EMAIL_HOST_USER = 'info@airbagfix.mx' # direccion a donde se enviaran los correos.
-EMAIL_HOST_PASSWORD = 'Wattolandia16954!' # NO ES RECOMENDABLE PONER EL PWD AQUI por que esto se subira a internet y quedara vulnerable
+EMAIL_HOST_PASSWORD = 'Wattolandia16954!' 
 # Leer ENVIROMENTAL VARIABLES
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False # Dependiendo del sistema se utiliza TLS o SSL
@@ -160,6 +158,7 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 #EMAIL_USE_SSL = False # Dependiendo del sistema se utiliza TLS o SSL"""
+
 
 if os.getcwd() == '/app':
     DEBUG = False # Si estamos en vivo el directorio sera este y DEBUG es False
