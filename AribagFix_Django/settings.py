@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "131605iteso#") # Obtiene las variables de 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False # Para cuando trabajamos de manera local
 
-ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix.up.railway.app',
+ALLOWED_HOSTS = ['www.airbagfix.mx','AirbagFix.onrender.com',
                  'airbagfix.mx'] # Que sitios web se permite acceder en railway
 
 
