@@ -14,19 +14,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # DJANGO_AIRBAGFIX_SK
-SECRET_KEY = os.getenv("SECRET_KEY", "131605iteso#") # Obtiene las variables de entorno que estan en otro lado. en este
+SECRET_KEY = os.getenv("SECRET_KEY", default = "131605iteso#") # Obtiene las variables de entorno que estan en otro lado. en este
 # caso la pondre directamente fija aqui 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True # Para cuando trabajamos de manera local
+DEBUG = False # Para cuando trabajamos de manera local es True
 
 ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix2025.onrender.com',
-                 'airbagfix.mx'] #,'localhost', '127.0.0.1'] # Que sitios web se permite acceder
+                 'airbagfix.mx','localhost', '127.0.0.1'] # Que sitios web se permite acceder
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "whitenoise.runserver_nostatic", # Permite que white noise ejecute en modo local los archivos
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware', #habilita whitenoise
     'whitenoise.middleware.WhiteNoiseMiddleware', # poner en este orden recomendado
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -115,11 +116,28 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+"""
+Esto es el codigo original con el que funciona correctamente solo en DEBUG = True. Abajo escribire un nuevo codigo
+para ver si con eso se corrige
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+"""
+STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
