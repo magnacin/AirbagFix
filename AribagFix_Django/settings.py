@@ -27,7 +27,7 @@ ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix2025.onrender.com',
 # Application definition
 
 INSTALLED_APPS = [
-    "whitenoise.runserver_nostatic", # Permite que white noise ejecute en modo local los archivos
+    'whitenoise.runserver_nostatic', # Permite que white noise ejecute en modo local los archivos
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,6 +128,11 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 """
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), # estan en el directorio principal en la carpeta 'static'
+    # el BASE_DIR esta definido al inicio de este archivo y lo hizo Django automaticamente
+]
+
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if not DEBUG:
@@ -135,9 +140,8 @@ if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
     # and renames the files with unique names for each version to support long-term caching
-    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
-
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    
 
 
 # Default primary key field type
