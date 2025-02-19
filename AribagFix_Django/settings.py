@@ -128,12 +128,13 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 """
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if not DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+    
     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
