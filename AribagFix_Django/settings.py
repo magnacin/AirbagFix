@@ -18,11 +18,10 @@ SECRET_KEY = os.getenv("SECRET_KEY", default = '') # Obtiene las variables de en
 # caso la pondre directamente fija aqui 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False # Para cuando trabajamos de manera local es True
+DEBUG = True # Para cuando trabajamos de manera local es True
 
 ALLOWED_HOSTS = ['www.airbagfix.mx',
                  'airbagfix.mx','localhost', '127.0.0.1','airbagfix2025.onrender.com'] # Que sitios web se permite acceder
-
 
 # Application definition
 
@@ -97,7 +96,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -108,7 +106,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -138,7 +135,6 @@ EMAIL_PORT = 587  # Puerto SMTP
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')  # Tomar de variables de entorno
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')  # Tomar de variables de entorno
 EMAIL_USE_TLS = True
-
 
 if os.getcwd() == '/app':
     DEBUG = False # Si estamos en vivo el directorio sera este y DEBUG es False
