@@ -20,8 +20,8 @@ SECRET_KEY = os.getenv("SECRET_KEY", default = "131605iteso#") # Obtiene las var
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False # Para cuando trabajamos de manera local es True
 
-ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix2025.onrender.com','airbagfix2025.herokuapp.com',
-                 'airbagfix.mx','localhost', '127.0.0.1'] # Que sitios web se permite acceder
+ALLOWED_HOSTS = ['www.airbagfix.mx','airbagfix2025.herokuapp.com',
+                 'airbagfix.mx','localhost', '127.0.0.1']#,'airbagfix2025.onrender.com'] # Que sitios web se permite acceder
 
 
 # Application definition
