@@ -1,0 +1,17 @@
+# render.yaml
+
+services:
+  - type: web
+    name: airbagfix2025 # Nombre del servicio en Render (coincide con el nombre de la aplicación)
+    runtime: python # Especifica el runtime (Python)
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput  # Recopila archivos estáticos
+    startCommand: gunicorn AribagFix_Django.wsgi:application # Comando para iniciar la aplicación
+    env: python # Entorno de Python
+    plan: hobby # Plan hobby (gratuito con límites)
+    numInstances: 1 # Número de instancias
+    healthCheckPath: / # Ruta para el health check
+    staticFiles:
+      - path: /static
+        destination: staticfiles # Ruta donde se sirven los archivos estáticos
